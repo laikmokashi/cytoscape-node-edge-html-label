@@ -37,7 +37,7 @@ gulp.task('test', function (done) {
 });
 
 gulp.task('min', function () {
-  return gulp.src(['dist/cytoscape-node-html-label.js'])
+  return gulp.src(['dist/cytoscape-node-edge-html-label.js'])
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist', {ext: '.min.js'}));

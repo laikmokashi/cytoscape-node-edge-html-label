@@ -19,6 +19,6 @@
     "skipLibCheck": true
   },
   "files": [
-    "./src/cytoscape-node-html-label.ts"
+    "./src/cytoscape-node-edge-html-label.ts"
   ]
 }

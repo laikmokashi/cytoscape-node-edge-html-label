@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/cytoscape-node-html-label.iml" filepath="$PROJECT_DIR$/.idea/cytoscape-node-html-label.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cytoscape-node-edge-html-label.iml" filepath="$PROJECT_DIR$/.idea/cytoscape-node-edge-html-label.iml" />
     </modules>
   </component>
 </project>

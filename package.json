@@ -1,11 +1,11 @@
 {
-  "name": "cytoscape-node-html-label",
-  "version": "1.2.2",
-  "description": "labels for cytoscape nodes",
-  "author": "Kalugin Sergey <kalugin.perm@gmail.com> (https://github.com/kaluginserg)",
-  "main": "./dist/cytoscape-node-html-label.js",
+  "name": "cytoscape-node-edge-html-label",
+  "version": "1.0.0",
+  "description": "labels for cytoscape nodes and edges",
+  "author": "Laik Mokashi <laikmokashi20@gmail.com> (https://github.com/laikmokashi) && Tanishq Mehta <tanishqmehta13@gmail.com (https://github.com/tanishq13)>",
+  "main": "./dist/cytoscape-node-edge-html-label.js",
   "spm": {
-    "main": "./dist/cytoscape-node-html-label.js"
+    "main": "./dist/cytoscape-edge-node-html-label.js"
   },
   "scripts": {
     "test": "gulp test",
@@ -16,19 +16,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaluginserg/cytoscape-node-html-label.git"
+    "url": "git+https://github.com/laikmokashi/cytoscape-node-edge-html-label"
   },
   "keywords": [
     "cytoscape",
     "cytoscape-extension",
     "cytoscape-labels",
-    "cytoscape html label"
+    "cytoscape html label",
+    "cytoscpae node edge html label"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kaluginserg/cytoscape-node-html-label/issues"
+    "url": "https://github.com/laikmokashi/cytoscape-node-edge-html-label/issues"
   },
-  "homepage": "https://github.com/kaluginserg/cytoscape-node-html-label",
+  "homepage": "https://github.com/laikmokashi/cytoscape-node-edge-html-label",
   "devDependencies": {
     "@types/cytoscape": "^3.14.11",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
@@ -57,5 +58,8 @@
       "optional": true
     }
   },
-  "dependencies": {}
+  "types": "./dist\\cytoscape-node-edge-html-label.d.ts",
+  "directories": {
+    "test": "test"
+  }
 }

@@ -1,13 +1,13 @@
 {
-  "name": "cytoscape-node-html-label",
+  "name": "cytoscape-node-edge-html-label",
   "description": "labels for cytoscape nodes",
-  "main": "./dist/cytoscape-node-html-label.js",
+  "main": "./dist/cytoscape-node-edge-html-label.js",
   "dependencies": {
     "cytoscape": "^3.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaluginserg/cytoscape-node-html-label.git"
+    "url": "https://github.com/kaluginserg/cytoscape-node-edge-html-label.git"
   },
   "ignore": [
     "**/.*",
