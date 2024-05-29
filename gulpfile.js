@@ -5,7 +5,7 @@ var bump = require('gulp-bump');
 var tag_version = require('gulp-tag-version');
 var rename = require('gulp-rename');
 
-var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify-es').default;
 
 var Server = require('karma').Server;
 

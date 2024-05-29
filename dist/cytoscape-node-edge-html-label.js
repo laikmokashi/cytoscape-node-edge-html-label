@@ -96,8 +96,8 @@
             }
         }
         _renderEdgePosition(position, id) {
-            let edge = this._cy.$('#' + id);
-            let cp = edge.controlPoints();
+            const edge = this._cy.$('#' + id);
+            const cp = edge.controlPoints();
             let p1;
             let p2;
             if (cp?.length &&
@@ -191,7 +191,7 @@
                 const nodeElem = document.createElement('div');
                 var observer = new MutationObserver(function (mutations) {
                     if (document.contains(nodeElem)) {
-                        let cyNode = _cy.nodes(`#${nodeElem.children[0].id.split(':')[1]}`);
+                        const cyNode = _cy.nodes(`#${nodeElem.children[0].id.split(':')[1]}`);
                         cyNode.data('htmlNode', nodeElem);
                         try {
                             cyNode.style({
@@ -227,13 +227,12 @@
             }
         }
         updateElemPosition(id, position) {
-            let node = this._cy.$('#' + id);
+            const node = this._cy.$('#' + id);
             let isEdge = false;
             if (node.length) {
                 isEdge = node.isEdge() ? true : false;
             }
             const ele = this._elements[id];
-            console.log(isEdge);
             if (ele && isEdge) {
                 ele.updateEdgePosition(position, id);
             }
@@ -346,7 +345,7 @@
         }
         function moveCyHandler(ev) {
             _lc.updateElemPosition(ev.target.id(), getNodePosition(ev.target));
-            let edgesConnected = _cy.$('#' + ev.target.id()).connectedEdges();
+            const edgesConnected = _cy.$('#' + ev.target.id()).connectedEdges();
             if (edgesConnected.length > 0) {
                 edgesConnected.forEach((e) => {
                     _lc.updateElemPosition(e.id(), getEdgePosition(e));
