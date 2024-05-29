@@ -278,7 +278,7 @@ interface CytoscapeContainerParams {
       id: string,
       param: CytoscapeNodeHtmlParams,
       payload: { data?: any; position?: ICytoscapeNodeHtmlPosition } = {},
-      _cy: any
+      _cy: any,type:string
     ) {
       const cur = this._elements[id];
 
@@ -286,11 +286,8 @@ interface CytoscapeContainerParams {
         this._param = param;
         cur.updateParams(param);
         cur.updateData(payload.data);
-        if (
-          id.includes('task') ||
-          id.includes('workflow') ||
-          id.includes('canvas')
-        ) {
+        if (type == 'node')
+        {
           cur.updatePosition(payload.position);
         } else {
           cur.updateEdgePosition(payload.position, id);
@@ -446,7 +443,7 @@ interface CytoscapeContainerParams {
                 position: getNodePosition(d),
                 data: d.data(),
               },
-              cy
+              cy ,'node'
             );
           } else if (d.isEdge()) {
             _lc.addOrUpdateElem(
@@ -456,7 +453,7 @@ interface CytoscapeContainerParams {
                 position: getEdgePosition(d),
                 data: d.data(),
               },
-              cy
+              cy ,'edge'
             );
           }
         });
@@ -477,7 +474,7 @@ interface CytoscapeContainerParams {
               position: getNodePosition(target),
               data: target.data(),
             },
-            _cy
+            _cy ,'node'
           );
         } else if (target.isEdge()) {
           _lc.addOrUpdateElem(
@@ -487,7 +484,7 @@ interface CytoscapeContainerParams {
               position: getEdgePosition(target),
               data: target.data(),
             },
-            _cy
+            _cy ,'edge'
           );
         }
       }
@@ -533,7 +530,7 @@ interface CytoscapeContainerParams {
               position: getNodePosition(target),
               data: target.data(),
             },
-            _cy
+            _cy ,'node'
           );
         } else if (target.isEdge()) {
           _lc.addOrUpdateElem(
@@ -543,7 +540,7 @@ interface CytoscapeContainerParams {
               position: getEdgePosition(target),
               data: target.data(),
             },
-            _cy
+            _cy ,'edge'
           );
         }
       } else {

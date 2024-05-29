@@ -170,15 +170,13 @@
             this._elements = {};
             this._cy = _cy;
         }
-        addOrUpdateElem(id, param, payload = {}, _cy) {
+        addOrUpdateElem(id, param, payload = {}, _cy, type) {
             const cur = this._elements[id];
             if (cur) {
                 this._param = param;
                 cur.updateParams(param);
                 cur.updateData(payload.data);
-                if (id.includes('task') ||
-                    id.includes('workflow') ||
-                    id.includes('canvas')) {
+                if (type == 'node') {
                     cur.updatePosition(payload.position);
                 }
                 else {
@@ -299,13 +297,13 @@
                         _lc.addOrUpdateElem(d.id(), x, {
                             position: getNodePosition(d),
                             data: d.data(),
-                        }, cy);
+                        }, cy, 'node');
                     }
                     else if (d.isEdge()) {
                         _lc.addOrUpdateElem(d.id(), x, {
                             position: getEdgePosition(d),
                             data: d.data(),
-                        }, cy);
+                        }, cy, 'edge');
                     }
                 });
             });
@@ -318,13 +316,13 @@
                     _lc.addOrUpdateElem(target.id(), param, {
                         position: getNodePosition(target),
                         data: target.data(),
-                    }, _cy);
+                    }, _cy, 'node');
                 }
                 else if (target.isEdge()) {
                     _lc.addOrUpdateElem(target.id(), param, {
                         position: getEdgePosition(target),
                         data: target.data(),
-                    }, _cy);
+                    }, _cy, 'edge');
                 }
             }
         }
@@ -360,13 +358,13 @@
                     _lc.addOrUpdateElem(target.id(), param, {
                         position: getNodePosition(target),
                         data: target.data(),
-                    }, _cy);
+                    }, _cy, 'node');
                 }
                 else if (target.isEdge()) {
                     _lc.addOrUpdateElem(target.id(), param, {
                         position: getEdgePosition(target),
                         data: target.data(),
-                    }, _cy);
+                    }, _cy, 'edge');
                 }
             }
             else {
