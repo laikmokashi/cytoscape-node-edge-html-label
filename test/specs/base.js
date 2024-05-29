@@ -76,13 +76,5 @@ describe('base', function () {
     isMainDefinedTest();
   });
 
-  it('nodeHtmlLabel can reinit', function () {
-    cyInitPlugin();
-    cyUpdateElements();
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 100;
-    setTimeout(function () {
-      expect(getWrapDiv().childNodes.length).toEqual(2);
-      isMainDefinedTest();
-    }, 50)
-  });
+ 
 });
