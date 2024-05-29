@@ -32,7 +32,7 @@
   "homepage": "https://github.com/laikmokashi/cytoscape-node-edge-html-label",
   "devDependencies": {
     "@types/cytoscape": "^3.14.11",
-    "@types/node": "^20.9.4",
+    "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
     "eslint": "^7.18.0",
