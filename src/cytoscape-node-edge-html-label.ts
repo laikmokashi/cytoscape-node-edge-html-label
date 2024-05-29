@@ -77,7 +77,6 @@ interface CytoscapeContainerParams {
       { node, position = null, data = null, _cy }: ILabelElement,
       params: CytoscapeNodeHtmlParams
     ) {
-      // console.log('inside htmllable constructor', node);
       this._params = params;
       this.updateParams(params);
       this._node = node;
@@ -183,8 +182,8 @@ interface CytoscapeContainerParams {
       position: ICytoscapeNodeHtmlPosition,
       id: string
     ) {
-      let edge = this._cy.$('#' + id);
-      let cp = edge.controlPoints();
+      const edge = this._cy.$('#' + id);
+      const cp = edge.controlPoints();
       let p1: any;
       let p2: any;
       if (
@@ -303,7 +302,7 @@ interface CytoscapeContainerParams {
         const nodeElem = document.createElement('div');
         var observer = new MutationObserver(function (mutations) {
           if (document.contains(nodeElem)) {
-            let cyNode = _cy.nodes(`#${nodeElem.children[0].id.split(':')[1]}`);
+            const cyNode = _cy.nodes(`#${nodeElem.children[0].id.split(':')[1]}`);
             cyNode.data('htmlNode', nodeElem);
             try {
               cyNode.style({
@@ -348,14 +347,13 @@ interface CytoscapeContainerParams {
     }
 
     updateElemPosition(id: string, position?: ICytoscapeNodeHtmlPosition) {
-      let node = this._cy.$('#' + id);
+      const node = this._cy.$('#' + id);
       let isEdge = false;
       if (node.length) {
         isEdge = node.isEdge() ? true : false;
       }
 
       const ele = this._elements[id];
-      console.log(isEdge);
 
       if (ele && isEdge) {
         ele.updateEdgePosition(position, id);
@@ -513,7 +511,7 @@ interface CytoscapeContainerParams {
 
     function moveCyHandler(ev: ICyEventObject) {
       _lc.updateElemPosition(ev.target.id(), getNodePosition(ev.target));
-      let edgesConnected = _cy.$('#' + ev.target.id()).connectedEdges();
+      const edgesConnected = _cy.$('#' + ev.target.id()).connectedEdges();
       if (edgesConnected.length > 0) {
         edgesConnected.forEach((e: any) => {
           _lc.updateElemPosition(e.id(), getEdgePosition(e));
