@@ -23,8 +23,6 @@ This extension provides ability to add labels for Cytoscape nodes. Simple exampl
 
 Download the library:
  * via npm: `npm install cytoscape-node-edge-html-label`,
- * via bower: `bower install cytoscape-node-edge-html-label`, or
- * via direct download from the repository (probably from a tag).
 
 #### Plain HTML/JS has extension registered for you automatically:
 ```html
