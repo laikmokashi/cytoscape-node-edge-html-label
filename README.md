@@ -4,7 +4,7 @@ cytoscape-node-edge-html-label
 
 ## Description
 
-This extension provides ability to add labels for Cytoscape nodes. Simple example:
+This extension provides ability to add labels for Cytoscape nodes and edges. Simple example:
 
 `cyInstance.nodeEdgeHtmlLabel( [{ tpl: d => '<div>' + d + '</div>' }] );`
 
@@ -68,20 +68,20 @@ cyInstance.nodeEdgeHtmlLabel([
           return '<div>this is div</div>';
           // your html template here
         },
-      }
+      },
+       {
+        query: 'node', // cytoscape query selector
+        halign: 'center', // title vertical position. Can be 'left',''center, 'right'
+        valign: 'center', // title vertical position. Can be 'top',''center, 'bottom'
+        halignBox: 'center', // title vertical position. Can be 'left',''center, 'right'
+        valignBox: 'center', // title relative box vertical position. Can be 'top',''center, 'bottom'
+        cssClass: '', // any classes will be as attribute of <div> container for every title,
+        tpl(data: any) {
+          return `<div > node template 
+          </div>`;
+          // your html template here
+        }
 ]);
-```
-
-To make links clickable inside your labels, you need to pass `enablePointerEvents: true` as the 3rd argument to `nodeEdgeHtmlLabel`:
-
-```js
-cyInstance.nodeEdgeHtmlLabel([
-  {
-    ...
-  }
-], {
-  enablePointerEvents: true
-});
 ```
 
 ## Usage example
@@ -205,6 +205,18 @@ this.cy.nodeEdgeHtmlLabel([
           // your html template here
         },
       },
+      {
+        query: 'node', // cytoscape query selector
+        halign: 'center', // title vertical position. Can be 'left',''center, 'right'
+        valign: 'center', // title vertical position. Can be 'top',''center, 'bottom'
+        halignBox: 'center', // title vertical position. Can be 'left',''center, 'right'
+        valignBox: 'center', // title relative box vertical position. Can be 'top',''center, 'bottom'
+        cssClass: '', // any classes will be as attribute of <div> container for every title,
+        tpl(data: any) {
+          return `<div > node template 
+          </div>`;
+          // your html template here
+        }
     ]);
 
 
