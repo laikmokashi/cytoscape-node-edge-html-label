@@ -81,6 +81,7 @@ cyInstance.nodeEdgeHtmlLabel([
           </div>`;
           // your html template here
         }
+       }
 ]);
 ```
 
@@ -217,6 +218,7 @@ this.cy.nodeEdgeHtmlLabel([
           </div>`;
           // your html template here
         }
+        } 
     ]);
 
 
