@@ -8,6 +8,9 @@ This extension provides ability to add labels for Cytoscape nodes and edges. Sim
 
 `cyInstance.nodeEdgeHtmlLabel( [{ tpl: d => '<div>' + d + '</div>' }] );`
 
+Demo : https://laikmokashi.github.io/cytoscape-node-edge-html-lable-example/
+![image](https://github.com/laikmokashi/cytoscape-node-edge-html-label/assets/87846071/caefd1da-32a7-4df3-9e5b-110c47bb4abc)
+
 
 
 ## Features
