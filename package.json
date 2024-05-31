@@ -1,6 +1,6 @@
 {
   "name": "cytoscape-node-edge-html-label",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "labels for cytoscape nodes and edges",
   "author": "Laik Mokashi <laikmokashi20@gmail.com> (https://github.com/laikmokashi) && Tanishq Mehta <tanishqmehta13@gmail.com (https://github.com/tanishq13)>",
   "main": "./dist/cytoscape-node-edge-html-label.js",
@@ -19,6 +19,8 @@
     "url": "git+https://github.com/laikmokashi/cytoscape-node-edge-html-label"
   },
   "keywords": [
+    "cytoscape-node-edge-html-label",
+    "cytoscape-node-html-label",
     "cytoscape",
     "cytoscape-extension",
     "cytoscape-labels",
